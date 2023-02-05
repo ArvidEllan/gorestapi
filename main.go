@@ -39,7 +39,16 @@ func handleRequests() {
 	log.Fatal(http.ListenAndServe(":8081", myRouter))
 }
 
+//func main() {
+//	handleRequests()
+//}
+
 func main() {
+	fmt.Println("Rest API v2.0 - Mux Routers")
+	Articles = []Article{
+		Article{Title: "Hello", Desc: "Article Description", Content: "Article Content"},
+		Article{Title: "Hello 2", Desc: "Article Description", Content: "Article Content"},
+	}
 	handleRequests()
 }
 
